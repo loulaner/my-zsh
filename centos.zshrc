@@ -70,21 +70,3 @@ alias -s gr='git rest --force'
 
 PROMPT='%{$fg_bold[green]%}%p%{$fg[cyan]%}%d %{$reset_color%}>'
 
-. /usr/local/etc/autojump.sh
-
-plugins=(git ruby autojump osx mvn gradle)
-
-JAVA_OPTS="-Xms256M -Xmx768M"
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)
-export MAVEN_OPTS="-Xms1024m -Xmx2048m -Dfile.encoding=UTF-8"
-export PATH=/Users/ryan/.rvm/bin:/usr/local/Cellar/ctags/5.8/bin:$PATH:/Users/ryan/.rvm/gems/ruby-2.0.0-rc1/bin:/Users/ryan/.rvm/gems/ruby-2.0.0-rc1@global/bin:/Users/ryan/.rvm/rubies/ruby-2.0.0-rc1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-
-#THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
-[[ -s "/Users/ryan/.jenv/bin/jenv-init.sh" ]] && source "/Users/ryan/.jenv/bin/jenv-init.sh" && source "/Users/ryan/.jenv/commands/completion.sh"
-
-export LC_ALL=zh_CN.UTF-8  
-export LANG=zh_CN.UTF-8
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-export M2_HOME=$MAVEN_HOME
