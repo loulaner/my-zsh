@@ -37,54 +37,44 @@ ZSH_THEME="robbyrussell"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# Uncomment following line if you want to  shown in the command execution time stamp 
+# in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
+# yyyy-mm-dd
+# HIST_STAMPS="mm/dd/yyyy"
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git autojump brew bundler gem history-substring-search mvn osx rails ruby rvm vagrant  xcode)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-alias ll="ls -l"
-alias la="ls -la"
-alias cls="clear"
-alias grep="grep --color=auto"
-alias vi="vim"
-alias -s html=vi
-alias -s rb=vi
-alias -s py=vi
-alias -s js=vi
-alias -s c=vi
-alias -s java=vi
-alias -s txt=vi
-alias -s gz='tar -xzvf'
-alias -s tgz='tar -xzvf'
-alias -s zip='unzip'
-alias -s bz2='tar -xjvf'
-alias -s ga='git add -A'
-alias -s gc="git commit -m 'update' "
-alias -s gp='git push'
-alias -s gr='git rest --force'
+# User configuration
+source $ZSH/plugins/history-substring-search/history-substring-search.zsh
 
-PROMPT='%{$fg_bold[green]%}%p%{$fg[cyan]%}%d %{$reset_color%}>'
-
-. /usr/local/etc/autojump.sh
-
-plugins=(git ruby autojump osx mvn gradle)
-
-JAVA_OPTS="-Xms256M -Xmx768M"
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)
-export MAVEN_OPTS="-Xms1024m -Xmx2048m -Dfile.encoding=UTF-8"
-export PATH=/Users/ryan/.rvm/bin:/usr/local/Cellar/ctags/5.8/bin:$PATH:/Users/ryan/.rvm/gems/ruby-2.0.0-rc1/bin:/Users/ryan/.rvm/gems/ruby-2.0.0-rc1@global/bin:/Users/ryan/.rvm/rubies/ruby-2.0.0-rc1/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-
-#THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
-[[ -s "/Users/ryan/.jenv/bin/jenv-init.sh" ]] && source "/Users/ryan/.jenv/bin/jenv-init.sh" && source "/Users/ryan/.jenv/commands/completion.sh"
-
-export LC_ALL=zh_CN.UTF-8  
-export LANG=zh_CN.UTF-8
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH="/usr/local/Cellar/ctags/5.8/bin:/Users/ryan/.rvm/gems/ruby-2.0.0-p353/bin:/Users/ryan/.rvm/gems/ruby-2.0.0-p353@global/bin:/Users/ryan/.rvm/rubies/ruby-2.0.0-p353/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ryan/.rvm/bin"
 
 export M2_HOME=$MAVEN_HOME
+
+#export LC_ALL=zh_CN.UTF-8  
+#export LANG=zh_CN.UTF-8
+
+#export MAVEN_OPTS="-Xms1024m -Xmx2048m -Dfile.encoding=UTF-8"
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# # Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+[[ -s "/Users/ryan/.jenv/bin/jenv-init.sh" ]] && source "/Users/ryan/.jenv/bin/jenv-init.sh" && source "/Users/ryan/.jenv/commands/completion.sh"
