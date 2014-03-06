@@ -78,3 +78,9 @@ export M2_HOME=$MAVEN_HOME
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 [[ -s "/Users/ryan/.jenv/bin/jenv-init.sh" ]] && source "/Users/ryan/.jenv/bin/jenv-init.sh" && source "/Users/ryan/.jenv/commands/completion.sh"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+alias vi="mvim"
+alias vim="mvim"
+
